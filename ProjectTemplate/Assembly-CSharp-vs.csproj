@@ -46,9 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Framework\Audio\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\Framework\Serialization\EncryptedXmlSerializer.cs" />
-     <Compile Include="Assets\Scripts\Framework\Singleton\MonoSingleton.cs" />
+     <Compile Include="Assets\AdditionalFramework\Examples\Scripts\SoundManager\SoundManagerExample.cs" />
+     <Compile Include="Assets\AdditionalFramework\MonoSingleton\MonoSingleton.cs" />
+     <Compile Include="Assets\AdditionalFramework\Serialization\EncryptedXmlSerializer.cs" />
+     <Compile Include="Assets\AdditionalFramework\SoundManager\SoundManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

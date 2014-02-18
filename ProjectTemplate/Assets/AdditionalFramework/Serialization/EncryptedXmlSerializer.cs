@@ -8,7 +8,12 @@ using UnityEngine;
 
 namespace Com.Nravo.FlipTheBoard.PersistantStorage
 {
-		public static class EncryptedXmlSerializer
+    /*
+     *  Tested on Standalone, Android, iOS
+     * 
+     *  Class to save and read encrypted XML files.
+     */
+	public static class EncryptedXmlSerializer
 	{
 		private static readonly string PrivateKey = SystemInfo.deviceUniqueIdentifier.Replace("-", string.Empty);
 

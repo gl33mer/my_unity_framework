@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Com.Nravo.Framework;
+using System.Runtime.InteropServices;
 
 namespace Com.Nravo.Framework
 {
@@ -9,21 +10,28 @@ namespace Com.Nravo.Framework
         [Range(0.0f, 1.0f)] public float musicVolume;
 
         public AudioClip backgroundMusic;
-        public AudioClip planeMusic;
-
-        public bool SoundEnabled { set; get; }
-        public bool MusicEnabled { set; get; }
-
         private AudioSource _backgroundMusicSource;
+
+        private bool _soundEnabled;
+        private bool _musicEnabled;
+
+        public bool IsSoundEnabled
+        {
+            get { return _soundEnabled; }
+        }
+
+        public bool IsMusicEnabled
+        {
+            get { return _musicEnabled; }
+        }
 
         #region init
 
         public override void Init()
         {
-            SoundEnabled = true;
-            MusicEnabled = true;
+            _soundEnabled = true;
+            _musicEnabled = true;
             CreateBackgroundMusicSource();
-            if (MusicEnabled) { TurnMusicOn(); }
         }
 
         private void CreateBackgroundMusicSource()
@@ -39,21 +47,23 @@ namespace Com.Nravo.Framework
 
         #endregion
 
-        #region music
-
-        private void TurnMusicOff()
+        #region toggles
+        public void ToggleSound()
         {
-            if (_backgroundMusicSource.isPlaying)
-            {
-                _backgroundMusicSource.Pause();
-            }
-            MusicEnabled = false;
+            _soundEnabled = !_soundEnabled;
         }
 
-        private void TurnMusicOn()
+        public void ToggleMusic()
         {
+            if (_musicEnabled && _backgroundMusicSource.isPlaying)
+            {
+                _backgroundMusicSource.Pause();
+                _musicEnabled = false;
+                return;
+            }
+
             _backgroundMusicSource.Play();
-            MusicEnabled = true;
+            _musicEnabled = true;
         }
 
         #endregion
@@ -85,7 +95,7 @@ namespace Com.Nravo.Framework
             source.clip = clip;
             source.volume = volume;
             source.pitch = pitch;
-            if (SoundEnabled) { source.Play(); }
+            if (_soundEnabled) { source.Play(); }
             Destroy(go, clip.length);
             return source;
         }
@@ -112,7 +122,7 @@ namespace Com.Nravo.Framework
             source.clip = clip;
             source.volume = volume;
             source.pitch = pitch;
-            if (SoundEnabled) { source.Play(); }
+            if (_soundEnabled) { source.Play(); }
             Destroy(go, clip.length);
             return source;
         }
