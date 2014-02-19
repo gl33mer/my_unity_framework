@@ -43,6 +43,7 @@ namespace Com.Nravo.Framework
             _backgroundMusicSource.clip = backgroundMusic;
             _backgroundMusicSource.loop = true;
             _backgroundMusicSource.volume = musicVolume;
+            if (_musicEnabled) { _backgroundMusicSource.Play(); }
         }
 
         #endregion

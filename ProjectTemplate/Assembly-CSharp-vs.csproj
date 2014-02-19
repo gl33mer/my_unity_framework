@@ -50,6 +50,8 @@
      <Compile Include="Assets\AdditionalFramework\MonoSingleton\MonoSingleton.cs" />
      <Compile Include="Assets\AdditionalFramework\Serialization\EncryptedXmlSerializer.cs" />
      <Compile Include="Assets\AdditionalFramework\SoundManager\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Static\Strings\AnimatorParams.cs" />
+     <Compile Include="Assets\Scripts\Static\Strings\Tags.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
