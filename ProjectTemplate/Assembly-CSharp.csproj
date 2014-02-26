@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\AdditionalFramework\Examples\Scripts\SoundManager\SoundManagerExample.cs" />
      <Compile Include="Assets\AdditionalFramework\MonoSingleton\MonoSingleton.cs" />
-     <Compile Include="Assets\AdditionalFramework\Serialization\EncryptedXmlSerializer.cs" />
+     <Compile Include="Assets\AdditionalFramework\PersistantStorage\PlayerPrefs\CustomPlayerPrefs.cs" />
+     <Compile Include="Assets\AdditionalFramework\PersistantStorage\PlayerPrefs\PlayerPrefsStrings.cs" />
+     <Compile Include="Assets\AdditionalFramework\PersistantStorage\Serialization\EncryptedXmlSerializer.cs" />
      <Compile Include="Assets\AdditionalFramework\SoundManager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Static\Strings\AnimatorParams.cs" />
      <Compile Include="Assets\Scripts\Static\Strings\Tags.cs" />
