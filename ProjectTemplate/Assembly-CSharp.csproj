@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AdditionalFramework\Examples\Scripts\SoundManager\SoundManagerExample.cs" />
+     <Compile Include="Assets\AdditionalFramework\GUI\FPSHUD.cs" />
      <Compile Include="Assets\AdditionalFramework\MonoSingleton\MonoSingleton.cs" />
      <Compile Include="Assets\AdditionalFramework\PersistantStorage\PlayerPrefs\CustomPlayerPrefs.cs" />
      <Compile Include="Assets\AdditionalFramework\PersistantStorage\Serialization\EncryptedXmlSerializer.cs" />
