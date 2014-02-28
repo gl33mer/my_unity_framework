@@ -46,7 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AdditionalFramework\Editor\EditorStateWindow\EditorStateWindow.cs" />
+     <Compile Include="Assets\AdditionalFramework\CustomEditors\CatlikeCodingCustomListEditor\Editor\EditorList.cs" />
+     <Compile Include="Assets\AdditionalFramework\Examples\CatlikeCodingCustomListEditor\Editor\ListTesterInspector.cs" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
